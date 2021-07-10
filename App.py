@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
-model = pickle.load(open('model_.pkl', 'rb'))
+model = pickle.load(open('Model/model_.pkl', 'rb'))
 
 @app.route('/')
 def home():
