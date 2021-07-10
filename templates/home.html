@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-repeat:no-repeat;
+	background-size:cover;
+	overflow:hidden;
+}
+a{
+	padding:0px 120px;
+	color:#ffffff;
+	font-size:20px;
+	text-decoration:none;
+}
+h1{
+	color:#ffffff;
+	font-size:50px;
+}
+a:hover{color:#FFD700;}
+
+</style>
+</head>
+<body style="background-image:url('static/fire2.jpeg')">
+<div height="150px" width="1300px" name="one">
+<center><h1 target="one"><I><b>FOREST FIRES</b></I></h1></center>
+</div>
+<div height="50px" width="1300px">
+
+<a href="{{url_for('index')}}">HOME</a>
+<a href="{{url_for('about')}}" target="three">ABOUT</a>
+<a href="{{url_for('prediction')}}" target="three">PREDICTION</a>
+<a href="{{url_for('contact')}}" target="three">CONTACT US</a>
+
+</div>
+</body>
+</html>
+

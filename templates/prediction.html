@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-repeat:no-repeat;
+	background-size:cover;
+	overflow:hidden;
+
+}
+
+a{
+	padding:0px 120px;
+	font-size:20px;
+	text-decoration:none;
+}
+h1{
+	color:#2F4F4F;
+	font-size:50px;
+
+}
+a:hover{color:#FFD700;}
+</style>
+</head>
+<body style="background-image:url('static/fire6.jpeg')">
+<div height="150px" width="1300" name="one">
+<center><h1 target="one"><I><b>FOREST FIRES</b></I></h1></center>
+</div>
+<div height="50px" width="1300px" name="two">
+<center>
+<a href="{{url_for('index')}}" target="three">HOME</a>
+<a href="{{url_for('about')}}" target="three">ABOUT</a>
+<a href="{{url_for('prediction')}}" target="three">PREDICTION</a>
+<a href="{{url_for('contact')}}" target="three">CONTACT US</a>
+</center>
+</div><br><br><br>
+<form action="{{url_for('predict')}}"  method="post">
+<center>
+<table>
+<tr>
+<caption>PREDICTION</caption>
+</tr>
+<tr>
+<td>X-AXIS</td>
+<td><input type="number" name="x-axis" id="x-axis" step="any"  placeholder="Enter 1 - 9" min="1" max="9" required></td>
+</tr>
+<tr>
+<td>Y-AXIS</td>
+<td><input type="number" name="y-axis" id="y-axis" step="any" placeholder="Enter 2 - 9" min="2" max="9" required></td>
+</tr>
+<tr>
+<td>MONTH</td>
+<td><input type="number" name="month"  id="month" step="any" placeholder="Enter 1 - 12" min="1" max="12" required></td>
+</tr>
+<tr>
+<td>DAY</td>
+<td><input type="number" name="day" id="day" step="any" placeholder="Enter 1 - 7" min="1" max="7" required></td>
+</tr>
+<tr>
+<td>FFMC</td>
+<td>
+<input type="number" name="ffmc" id="ffmc" step="any" placeholder="Enter 18.7 - 96.20" min="18.7" max="96.20" required></td>
+</tr>
+<tr>
+<td>DMC</td>
+<td><input type="number" name="dmc" id="dmc" step="any" placeholder="Enter 1.1 - 291.3" min="1.1" max="291.3" required></td>
+</tr>
+<tr>
+<td>DC</td>
+<td><input type="number" name="dc" id="dc" step="any" placeholder="Enter 7.9 - 860.6" min="7.9" max="860.6" required></td>
+</tr>
+<tr>
+<td>ISI</td>
+<td><input type="number" name="isi" id="isi" step="any" step="any" placeholder="Enter 0.0 - 56.10" min="0.0" max="56.10" required></td>
+</tr>
+<tr>
+<td>TEMPERATURE</td>
+<td><input type="number" name="temperature" id="temperature" step="any" placeholder="Enter 2.2 - 33.30" min="2.2" max="33.30" required></td>
+</tr>
+<tr>
+<td>RH</td>
+<td><input type="number" name="rh" step="any" id="rh" placeholder="Enter 15.0 - 100"  min="15.0" max="100" required></td>
+</tr>
+<tr>
+<td>WIND</td>
+<td><input type="number" name="wind" step="any" id="wind" placeholder="Enter 0.40 - 9.40" min="0.40" max="9.40" required></td>
+</tr>
+<tr>
+<td>RAIN</td>
+<td><input type="number" name="rain" step="any" id="rain" placeholder="Enter 0.0 - 6.4"  min="0.0" max="6.4" required></td>
+</tr>
+<tr>
+<td><button type="submit">SUBMIT</td>
+</tr>
+</table>
+</center>
+</form>
+<b>
+<center>{{prediction_result}}</center>
+</body>
+</b>
+</html>
+
