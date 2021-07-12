@@ -5,25 +5,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
-model = pickle.load(open('Model/model_.pkl', 'rb'))
-
+model = pickle.load(open('model_.pkl', 'rb'))
 @app.route('/')
-def home():
-    return render_template('home.html')
-
-@app.route('/index')
-def index():
-    return render_template('home.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-@app.route('/prediction')
 def prediction():
     return render_template('prediction.html')
 
